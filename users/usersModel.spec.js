@@ -33,7 +33,7 @@ describe('users.insert', () => {
 	});
 
 	it('returns the newly inserted user', async () => {
-		const users = await Hobbits.insert({ name: 'whiskeyjack' });
+		const users = await Users.insert({ name: 'whiskeyjack' });
 		expect(users.name).toBe('whiskeyjack');
 	});
 });
