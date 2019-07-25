@@ -12,9 +12,10 @@ describe('users.insert', () => {
 
 		await Users.insert({ name: 'whiskeyjack' });
 		await Users.insert({ name: 'crokus' });
+		await Users.insert({ name: 'swedgen' });
 		users = await Users.getAll();
 
-		expect(users).toHaveLength(2);
+		expect(users).toHaveLength(3);
 	});
 
 	it('is able to insert the correct users', async () => {
@@ -23,10 +24,12 @@ describe('users.insert', () => {
 
 		await Users.insert({ name: 'whiskeyjack' });
 		await Users.insert({ name: 'crokus' });
+		await Users.insert({ name: 'swedgen' });
 		users = await Users.getAll();
 
 		expect(users[0].name).toBe('whiskeyjack');
 		expect(users[1].name).toBe('crokus');
+		expect(users[2].name).toBe('swedgen');
 	});
 
 	it('returns the newly inserted user', async () => {
