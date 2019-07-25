@@ -10,12 +10,10 @@ describe('users.insert', () => {
 		let users = await Users.getAll();
 		expect(users).toHaveLength(0);
 
-		// set up
 		await Users.insert({ name: 'whiskeyjack' });
 		await Users.insert({ name: 'crokus' });
-		users = await users.getAll();
+		users = await Users.getAll();
 
-		// assertion
 		expect(users).toHaveLength(2);
 	});
 
@@ -23,7 +21,6 @@ describe('users.insert', () => {
 		let users = await Users.getAll();
 		expect(users).toHaveLength(0);
 
-		// set up
 		await Users.insert({ name: 'whiskeyjack' });
 		await Users.insert({ name: 'crokus' });
 		users = await Users.getAll();
