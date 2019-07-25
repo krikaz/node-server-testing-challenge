@@ -1,6 +1,6 @@
 const express = require('express');
 
-const Characters = require('');
+const Users = require('');
 
 const server = express();
 
